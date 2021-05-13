@@ -53,9 +53,6 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-; no splash screen on startup
-(setq inhibit-splash-screen t)
-
 ; define variables
 (defvar max-line-width 120)
 (defvar tab-indent-default 4)
