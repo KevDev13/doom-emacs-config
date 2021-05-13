@@ -21,7 +21,7 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-
+(setq doom-font (font-spec :family "MesloLGS NF" :size 12))
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
@@ -74,9 +74,13 @@
 (setq-default tab-width tab-indent-default)
 (setq-default c-basic-offset tab-indent-c)
 
+(setq undo-limit 80000000       ; Raise undo-limit to 80Mb
+      evil-want-fine-undo t     ; By default while in insert all changes are one big blob. Be more granular
+      auto-save-default t)      ; auto-save please
+
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
-(global-set-key [f5] 'revert-buffer) ; use this to press key to revert on external changes (i.e. git)
-;(global-auto-revert-mode 1) ; use this to auto-revert on external changes (i.e. git)
+;(global-set-key [f5] 'revert-buffer) ; use this to press key to revert on external changes (i.e. git)
+(global-auto-revert-mode 1) ; use this to auto-revert on external changes (i.e. git)
 (global-set-key [(control c) (a)] 'company-complete) ; initiate manual completion via company
 
 ; org-mode uses auto-fill-mode
