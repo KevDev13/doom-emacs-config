@@ -63,13 +63,18 @@
 ;(setq indent-tabs-mode nil)
 
 ; set default window size
-(if (display-graphic-p)
-	(progn
-	  (setq initial-frame-alist
-			'(
-			  (width . 132) ; width in characters
-			  (height . 40) ; height in lines
-			  ))))
+;(if (display-graphic-p)
+;	(progn
+;	  (setq initial-frame-alist
+;			'(
+;			  (width . 132) ; width in characters
+;			  (height . 40) ; height in lines
+;			  ))))
+
+;; the t parameter apends to the hook, instead of prepending
+;; this means it'd be run after other hooks that might fiddle
+;; with the frame size
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
 
 ; set default tab size
 (setq-default tab-width tab-indent-default)
