@@ -84,11 +84,14 @@
       evil-want-fine-undo t     ; By default while in insert all changes are one big blob. Be more granular
       auto-save-default t)      ; auto-save please
 
+;; custom keybindings
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 ;(global-set-key [f5] 'revert-buffer) ; use this to press key to revert on external changes (i.e. git)
 (global-auto-revert-mode 1) ; use this to auto-revert on external changes (i.e. git)
 (global-set-key [(control c) (a)] 'company-complete) ; initiate manual completion via company
 ;(global-set-key [(control c) (t)] 'term) ; open new terminal
+(map! :leader
+      :desc "Comment or uncomment lines" "c /" #'comment-line)
 
 ; org-mode uses auto-fill-mode
 (setq-default fill-column max-line-width) ; not 70 chars per line
