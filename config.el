@@ -107,6 +107,8 @@
 (require 'rust-mode) ; require rust-mode
 (add-hook 'rust-mode-hook ; when in Rust, no using tabs, sadly...
           (lambda () (setq indent-tabs-mode nil)))
+
+;; better neotree icons
 (after! doom-themes
   (remove-hook 'doom-load-theme-hook #'doom-themes-neotree-config))
 (setq neo-theme 'icons)
