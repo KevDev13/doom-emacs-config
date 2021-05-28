@@ -40,7 +40,7 @@
        neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
-       tabs              ; a tab bar for Emacs
+       ;;tabs              ; a tab bar for Emacs
        ;;treemacs          ; a project drawer, like neotree but cooler
        ;;unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
@@ -108,6 +108,7 @@
        ;;tty               ; improve the terminal Emacs experience
 
        :lang
+       assembly         ; who doesn't love writing in assembly?
        cc                ; C > C++ == 1
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;csharp            ; unity, .NET, and mono shenanigans
