@@ -112,3 +112,8 @@
 (after! doom-themes
   (remove-hook 'doom-load-theme-hook #'doom-themes-neotree-config))
 (setq neo-theme 'icons)
+
+;; disable company in org-mode
+(defun no-company-in-org ()
+  (company-mode -1))
+(add-hook 'org-mode-hook 'no-company-in-org)
