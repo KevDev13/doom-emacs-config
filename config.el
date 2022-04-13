@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Kevin Garner"
-      user-mail-address "kevin@kgar.net")
+      user-mail-address "kevin@kevingarner.net")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -30,7 +30,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/repos/org-notes")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -57,10 +57,10 @@
 ; define variables
 (defvar max-line-width 120)
 (defvar tab-indent-default 4)
-(defvar tab-indent-c tab-indent-default)
+(defvar tab-indent-c 2)
 
 ; uncomment this if you ever have to use spaces over tabs
-;(setq indent-tabs-mode nil)
+(setq indent-tabs-mode nil)
 
 ; set default window size
 ;(if (display-graphic-p)
